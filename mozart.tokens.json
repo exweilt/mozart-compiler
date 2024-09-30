@@ -1,0 +1,1 @@
+[{"type":"PROC","value":"proc "},{"type":"ID","value":"square"},{"type":"LPAREN","value":"("},{"type":"ID","value":"x"},{"type":"COLON","value":":"},{"type":"BASIC_TYPE","value":"u8"},{"type":"RPAREN","value":")"},{"type":"RIGHTARROW","value":"->"},{"type":"BASIC_TYPE","value":"u8"},{"type":"LCURLY","value":"{"}]

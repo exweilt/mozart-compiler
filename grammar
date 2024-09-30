@@ -1,0 +1,24 @@
+Program -> (GlobalStatement)*
+GlobalStatement -> ProcedureDefinition | StaticVarDefinition
+
+StaticVarDefinition -> 'staticvar ' ID ':' BASIC_TYPE ';'
+ProcedureDefinition -> 'proc ' ID '(' Parameters ')' '->' BASIC_TYPE Block
+
+Parameters -> ( ID ':' BASIC_TYPE (',' ID ':' BASIC_TYPE)* )?
+
+Block -> '{' Statement* '}'
+
+Statement -> (Expression ';') | ReturnStatement
+ReturnStatement -> 'return' Expression ';'
+
+Expression -> Assignment | Sum | Sub | Term | '(' Expression ')'
+
+Assignment -> ID '=' Expression
+
+Sum -> Term '+' Expression
+Sub -> Term '-' Expression
+
+Term -> (UnOp Primary) | (UnOp '(' Expression ')') | Primary 
+UnOp -> '-' | '+'
+
+Primary -> ID | NUMERIC_LITERAL;

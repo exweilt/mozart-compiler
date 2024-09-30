@@ -1,0 +1,23 @@
+proc square(x: u8) -> u8 {
+    return x * x;
+}
+
+staticvar magic: u8;
+
+proc main() -> nil {
+    magic := square(2 + 2) + 65;
+    putch(magic);
+}
+
+# proc shit(a: u32) -> u32 {
+#     a + a;
+#     a := a + 1;
+#     a := a + 4 + 6
+#     4 := 3;
+#     +65;
+#     -a + 3;
+#
+#     return a * a;
+# }
+
+# const say_hello: procedure => 45;
